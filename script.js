@@ -39,7 +39,7 @@ function initMap() {
     map: map,
   });
 }
-  
+  //TEst
   function oneSecondFunction() {
     // get existing path
     points = line.getPath().getArray();
