@@ -1,125 +1,87 @@
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
-// This example adds a predefined symbol (an arrow) to a polyline.
-// Setting offset to 100% places the arrow at the end of the line.
-
-var line;
-var points;
-
-let startingLat = 22.291;
-let startingLng = 153.027;
+//
+// UAH Senior Design 2023
+// Multi-Sensor Signals of Opportunity Localization System
+//
 
 let map1, map2, map3, map4;
-function initMap() {
-  map1 = new google.maps.Map(document.getElementById("map1"), {
-    zoom: 6,
-    center: { lat: 20.291, lng: 153.027 },
-    mapTypeId: "terrain",
-    mapTypeControl: false,
-  });
+var m1Vector, m2Vector, m3Vector, m4Vector;
 
-  map2 = new google.maps.Map(document.getElementById("map2"), {
-    zoom: 6,
-    center: { lat: 20.291, lng: 153.027 },
-    mapTypeId: "terrain",
-    mapTypeControl: false,
-  });
-
-
-  map3 = new google.maps.Map(document.getElementById("map3"), {
-    zoom: 6,
-    center: { lat: 20.291, lng: 153.027 },
-    mapTypeId: "terrain",
-    mapTypeControl: false,
-  });
-
-  map4 = new google.maps.Map(document.getElementById("map4"), {
-    zoom: 6,
-    center: { lat: 20.291, lng: 153.027 },
-    mapTypeId: "terrain",
-    mapTypeControl: false,
-  });
-}
+var startingLat = 34.719;
+var startingLng = -86.666;
 
 function createPath(map, pathCoords, color) {
   // Create a new google maps Polyline object
-  var path = new google.maps.Polyline({
+  return line = new google.maps.Polyline({
+    map: map,
     path: pathCoords,
     geodesic: true,
     strokeColor: color,
     strokeOpacity: 1.0,
     strokeWeight: 2
   });
-
-  // Add the path to the map
-  path.setMap(map);
-
-  // Return the path object
-  return path;
 }
 
-var pathCoords = [
-  {lat: 37.7749, lng: -122.4194},
-  {lat: 40.730610, lng: -73.935242},
-  {lat: 41.8781, lng: -87.6298},
-  {lat: 34.0522, lng: -118.2437}
+function initMap() {
+
+  var path1 = [
+  {lat: startingLat, lng: startingLng },
+  {lat: 21.291, lng: -157.821},
+  {lat: -18.142, lng: 178.431},
+  {lat: -27.467, lng: 153.027}
 ];
 
-// // Create path
-// var path = createPath(map1, pathCoords, 'red');
-// var startPoint = pathCoords[0];
-// var marker = new google.maps.Marker({
-//   position: startPoint,
-//   map: map1,
-//   title: "Start Point",
-// })
+var path2 = [
+  {lat: startingLat, lng: startingLng },
+  {lat: -21.291, lng: 10.821},
+  {lat: -18.142, lng: 178.431},
+  {lat: -27.467, lng: 153.027}
+];
 
-//google.maps.event.addDomListener(window, 'load', initMap);
+var path3 = [
+  {lat: startingLat, lng: startingLng },
+  {lat: 22.291, lng: -147.821},
+  {lat: -18.142, lng: 178.431},
+  {lat: -27.467, lng: 153.027}
+];
 
-// Change latitude and longitude of path 
-//path.getPath().setAt(1, {lat: 38.8977, lng: -77.0366});
 
-  // const lineSymbol = {
-  //   path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-  // };
-  // // Create the polyline and add the symbol via the 'icons' property.
-  // line = new google.maps.Polyline({
-  //   path: [
-  //     { lat: startingLat, lng: startingLng },
-  //     { lat: startingLat + 0.5, lng: startingLng - 0.1},
-  //   ],
-  //   icons: [
-  //     {
-  //       icon: lineSymbol,
-  //       offset: "100%",
-  //     },
-  //   ],
-  //   map: map,
-  // });
-//}
 
-// function oneSecondFunction() {
-//   // get existing path
-//   points = line.getPath().getArray();
-  
-  
-//   // add new point
-//   points.push(new google.maps.LatLng(points[0] + 1.2, points[0] + 1.2));
-  
-//   window.alert(points);
+  map1 = new google.maps.Map(document.getElementById("map1"), {
+    zoom: 10,
+    center: {lat: startingLat, lng: startingLng},
+    mapTypeId: "terrain",
+    mapTypeControl: false,
+  });
 
-//   // update the polyline with the updated path
-//   line.setPath(points);
-// }
+  map2 = new google.maps.Map(document.getElementById("map2"), {
+    zoom: 10,
+    center: {lat: startingLat, lng: startingLng},
+    mapTypeId: "terrain",
+    mapTypeControl: false,
+  });
 
-//Add parseing for this function
-function getCurrentLat(){
+  map3 = new google.maps.Map(document.getElementById("map3"), {
+    zoom: 10,
+    center: {lat: startingLat, lng: startingLng},
+    mapTypeId: "terrain",
+    mapTypeControl: false,
+  });
 
-}
+  map4 = new google.maps.Map(document.getElementById("map4"), {
+    zoom: 10,
+    center: {lat: startingLat, lng: startingLng},
+    mapTypeId: "terrain",
+    mapTypeControl: false,
+  });
 
-function getCurrentLng(){
-}
-// let timerId = setInterval(() => oneSecondFunction(), 1000);
+  m1Vector1 = createPath(map1, path1, 'blue');
+  m2Vector2 = createPath(map2, path2, 'red');
+  m3Vector3 = createPath(map3, path3, 'green');
+
+  m4Vector1 = createPath(map4, path1, 'blue');
+  m4Vector2 = createPath(map4, path2, 'red');
+  m4Vector3 = createPath(map4, path3, 'green');
+
+}  
+
+google.maps.event.addDomListener(window, 'load', initMap);

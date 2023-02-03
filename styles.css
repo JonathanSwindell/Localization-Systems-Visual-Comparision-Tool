@@ -47,6 +47,14 @@
 }
 
 .botMap div{
+  border: 5px solid black;
   flex: 2;
   height: 350px;
+}
+
+#map1, #map2, #map3, #map4 {
+  border: 5px solid black;
+  height: 300px;
+  width: 50%;
+  float: left;
 }
