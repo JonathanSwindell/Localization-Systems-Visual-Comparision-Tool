@@ -47,7 +47,6 @@
 }
 
 .botMap div{
-  border: 5px solid black;
   flex: 2;
   height: 350px;
 }
