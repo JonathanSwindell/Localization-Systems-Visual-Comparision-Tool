@@ -1,18 +1,15 @@
-
-  .container h3 {
-    text-align: center;
-    margin-top: 0;
-  }
-
   .cardContainer {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .container {
-    flex-basis: 33.33%;
-    padding: 1rem;
+  .mapContainer {
+    
+    float: left;
+    width: 33.33%
+  }
+  .container { 
+    width: 100%;
   }
   .container h3 {
     text-align: center;
