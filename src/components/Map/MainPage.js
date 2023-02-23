@@ -12,13 +12,12 @@ const MainPage = () => {
         <p></p>
         <Card className={classes.cardContainer}>
 	    <section className={classes.mapContainer}>
-	    <h2>Map 1: Dr. Mukherjee FM Based Localization System</h2>
+	    <h2>Map 1: GPS (Control)</h2>
             <Map
               path={[
-                { lat: 33.719, lng: -86.666 },
-                { lat: 20.291, lng: -157.821 },
-                { lat: -19.142, lng: 178.431 },
-                { lat: -28.467, lng: 153.027 },
+                { lat: 34.719, lng: -86.666 },
+                { lat: 34.651, lng: -86.821 },
+                { lat: 34.651, lng: -86.858 },
               ]}
               color={"blue"}
               id="Map0"
@@ -26,13 +25,13 @@ const MainPage = () => {
 	    </section> 
     
 	    <section className={classes.mapContainer}>
-	    <h2>Map 2: SoO Localization System</h2>
+	    <h2>Map 2: FM Localization System</h2>
             <Map
               path={[
-                { lat: 33.719, lng: -86.666 },
-                { lat: 20.291, lng: -157.821 },
-                { lat: -19.142, lng: 178.431 },
-                { lat: -28.467, lng: 153.027 },
+                { lat: 34.719, lng: -86.666 },
+                { lat: 34.661, lng: -86.821 },
+                { lat: 34.681, lng: -86.851 },
+                { lat: 34.651, lng: -86.858 },
               ]}
               color={"red"}
               id="Map1"
@@ -40,13 +39,13 @@ const MainPage = () => {
 	    </section> 
          
 	    <section className ={classes.mapContainer}> 
-	    <h2>Map 3: SoO Localization with Dead Reckoning applied</h2>
+	    <h2>Map 3: FM, SoO, and Dead Reckoning</h2>
             <Map
               path={[
-                { lat: 33.719, lng: -86.666 },
-                { lat: 20.291, lng: -157.821 },
-                { lat: -19.142, lng: 178.431 },
-                { lat: -28.467, lng: 153.027 },
+                { lat: 34.719, lng: -86.666 },
+                { lat: 34.691, lng: -86.821 },
+                { lat: 34.681, lng: -86.851 },
+                { lat: 34.651, lng: -86.858 },
               ]}
               color={"green"}
               id="Map2"
@@ -58,15 +57,14 @@ const MainPage = () => {
         <p></p>
         <Card className={classes.cardContainer}>
         <section className={classes.container}>
-            <h2>Map 4: All Vectors Combined</h2>
+            <h2>Map 4: Trajectory</h2>
             <Map
               path={[
-                { lat: 33.719, lng: -86.666 },
-                { lat: 20.291, lng: -157.821 },
-                { lat: -19.142, lng: 178.431 },
-                { lat: -28.467, lng: 153.027 },
+                { lat: 34.719, lng: -86.666 },
+                { lat: 34.651, lng: -86.821 },
+                { lat: 34.651, lng: -86.858 },
               ]}
-              color={"green"}
+              color={"blue"}
               id="Map4"
             />
           </section>
