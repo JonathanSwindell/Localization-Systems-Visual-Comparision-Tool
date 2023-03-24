@@ -3,16 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.5.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "csv-stringify": "^6.3.0",
+    "csv-writer": "^1.6.0",
+    "fs": "^0.0.1-security",
     "google-map-react": "^2.2.0",
-    "react": "^18.0.0",
-    "react-bootstrap": "^2.7.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
     "react-papaparse": "^4.1.0",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^3.3.0",
+    "ws": "^8.13.0"
   },
   "scripts": {
     "start": "react-scripts start",

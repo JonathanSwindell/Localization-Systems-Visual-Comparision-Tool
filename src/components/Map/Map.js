@@ -15,13 +15,19 @@ const Map = ({ path, color, id }) => {
     useEffect(() => {
       let map = new window.google.maps.Map(document.getElementById(id), {
         zoom: 10,
-        center: { lat: 34.719, lng: -86.666 },
+        center: path[path.length-1],
         mapTypeId: "terrain",
         mapTypeControl: false,
       });
   
-      createPath(map, path, color);
+      const pathPolyline = createPath(map,path,color);
+      return () => {
+	   pathPolyline.setMap(null);
+      };
     }, [path,color,id]);
+	    
+   //createPath(map, path, color);
+   // }, [path,color,id]);
   
     return <div style={{ width: "100%", height: "400px" }} id={id} />;
   };
