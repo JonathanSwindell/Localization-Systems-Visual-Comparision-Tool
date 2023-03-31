@@ -5,6 +5,7 @@ import HeaderCartButton from "./HeaderCartButton";
 import HeaderInput from "./HeaderInput";
 import Papa from "papaparse";
 import { UserContext } from "../../store/cart-context"
+import { useWebSocket } from '../WebSocket/socket.js'
  
 // Allowed extensions for input file
 const allowedExtensions = ["csv"];

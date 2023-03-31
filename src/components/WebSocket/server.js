@@ -12,6 +12,7 @@ wss.on('connection',function connection(ws) {
 		};
 		ws.send(JSON.stringify(coordinates));
 	}, 1000); 
+	
 
 	ws.on('close',function close() {
 		console.log('Client disconnected');
