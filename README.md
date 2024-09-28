@@ -16,5 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 # Common Fixes
 
 To resolve an issue relating to the expected package name not matching the install package name navigate the path and modify the name accordingly.
+
 rename: WebsocketClient.js to WebSocketClient.js in node_modules/webpack-dev-server/client/clients
+
 rename: createSocketUrl.js to createSocketURL.js in node_modules/webpack-dev-server/client/utils
